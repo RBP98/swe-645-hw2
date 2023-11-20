@@ -29,6 +29,7 @@ pipeline{
             {
                 script
                 {
+		    sh 'whoami'
                     sh 'rm -rf *.war'
                     sh 'jar -cvf studentForm.war -C src/ .'
 		    sh 'echo ${BUILD_TIMESTAMP}'
